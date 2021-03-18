@@ -22,40 +22,43 @@
     {{ encore_entry_script_tags('app') }}
     {% endblock %}
 </head>
+{% set
+bouton={'actualités':'fa-hand-paper','avancées':'fa-spray-can','solidaires':'fa-street-view'} %}
 
 <body>
     <div class="container">
         <div class="row">
             {% block header %}
-            <div class="col-12 col-lg-3">
-                <img src="{{asset('build/logo_mobile.png')}}" alt="logo mobile" class="img-fluid mx-auto d-block"
-                    alt="">
+            <div class="col-12 col-lg-2">
+                <a href="{{path('home')}}"> <img src="{{asset('build/logo_mobile.png')}}" alt="logo mobile"
+                        class="img-fluid mx-auto d-block" alt=""></a>
             </div>
-            <div class="col-12 col-lg-9">
+            <div class="col-12 col-lg-10">
                 <div class="row d-none  d-lg-block ">
                     <nav class="nav navbar w-100 navbar-light bg-light">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Accueil</a>
+                            <a class="nav-link {% if page=='index' %}selected {% endif %} "
+                                href="{{path('home')}}">Accueil</a>
                         </li>
+                        {% for titre,icone in bouton %}
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Les actualitées</a>
+                            <a class="nav-link {% if page==titre %}selected {% endif %}" href="/{{titre}}">{{titre}}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">Les avancées</a>
+                        {% endfor %}
+                        <li class="nav-item  ml-auto d-none d-xl-block">
+
+                            <a class="nav-link text-right pr-0 nav-user" href="#"><i class="fas fa-user "></i>Gérald
+                                Fournier</a>
                         </li>
-                        </ul>
-                        <li class="navbar-item  ml-auto d-none d-xl-block">
-                            <a class="nav-link text-right" href="#">Gérald Fournier</a>
-                        </li>
-                        <li class="navbar-item  ">
-                            <a class="nav-link btn btn-primary" href="#"><i class="fas fa-upload    "></i>
+                        <li class="nav-item ">
+                            <a class="nav-link btn btn-sm btn-primary nav-button ml-2 p-1" href="#"><i
+                                    class="fas fa-upload "></i>
                                 Déconnexion</a>
                         </li>
                     </nav>
                 </div>
-                <div class="row d-flex justify-content-around mt-3 mb-2" id="accessRapide">
-                    {% set
-                    bouton={'actualités':'fa-hand-paper','avancées':'fa-spray-can','solidaires':'fa-street-view'} %}
+                <div class="row d-flex d-lg-none justify-content-around mt-3 mb-2" id="accessRapide">
+
                     {% for titre,icone in bouton %}
                     <div class="bouton">
                         <a class="btn btn-primary bouton-fond active" href="/{{titre}}" role="button">

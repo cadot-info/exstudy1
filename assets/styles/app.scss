@@ -12,6 +12,17 @@ $color_gris:#d8d5df;
     color: $color_orange !important;
 }
 
+nav {
+    .nav-user {
+        color: $color_bleue;
+        font-size: .8rem;
+    }
+
+    .nav-button {
+        font-size: .7rem;
+    }
+}
+
 .bouton {
     :active {
         color: $color_orange;
