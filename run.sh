@@ -1,6 +1,6 @@
 result=${PWD##*/}
 res=${PWD}
-docker kill $result
+docker kill $(docker ps -q)
 docker rm $result
 docker run -d -p 80:8000  \
     --name $result \

@@ -1,0 +1,152 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+{% set sujets=['vaccination','enfants','vaccin','fabrication','contenu','OMS','qui','pourquoi'] %}
+{% set questions=['Vaccins et vaccination : qu’est-ce que la vaccination ?','Pourquoi dois-je me faire vacciner (ou
+faire
+vacciner mes enfants)?','Comment les vaccins sont-ils mis au point et testés ?','Qu’y a-t-il dans un vaccin?','Quelles
+maladies les vaccins permettent-ils
+d’éviter?','Comment l’OMS contribue-t-elle à garantir l’innocuité des vaccins ?','Comment les vaccins protègent-ils les
+personnes et les communautés ?','Pourquoi la vaccination est-elle importante ?'] %}
+{% set textes=[
+'La vaccination est un moyen simple, sûr et efficace de se protéger des maladies dangereuses, avant d’être en contact
+avec ces affections. Elle utilise les défenses naturelles de l’organisme pour créer une résistance à des infections
+spécifiques et renforcer le système immunitaire.<br><br>Les vaccins stimulent le système immunitaire pour créer des
+anticorps, de la même manière que s’il était exposé à la<br>maladie. Mais comme les vaccins ne renferment que des formes
+tuées ou atténuées des germes, virus ou bactéries, ils ne<br>provoquent pas la maladie et n’exposent pas le sujet à des
+risques de complications.<br><br>La plupart des vaccins sont administrés par injection, mais certains se prennent par
+voie orale ou par aérosol nasal.','Les vaccins nous protègent tout au long de la vie, à partir de la naissance, dans
+l’enfance, l’adolescence et jusqu’à<br>la<br>vieillesse. Dans la plupart des pays, nous recevons une fiche ou un carnet
+de vaccination nous disant les vaccins que<br>nous ou nos enfants avons eus et les dates des prochains vaccins ou
+rappels. Il est important de rester à jour de toutes<br>les vaccinations.<br><br>En retardant les vaccinations, on
+risque de tomber gravement malade. Si on attend le moment où nous pensons que nous<br>risquons d’être exposés à une
+maladie, comme lors d’une épidémie, il ne restera peut-être pas suffisamment de temps pour<br>que le vaccin puisse agir
+ou pour administrer toutes les doses recommandées.<br><br>Pourquoi démarre-t-on la vaccination à un âge aussi
+jeune?<br><br>Dans la vie quotidienne, les jeunes enfants peuvent être exposés aux maladies en divers lieux et par
+diverses personnes,ce qui peut représenter un gros risque pour eux. Le calendrier de vaccination recommandé par
+l’OMS est conçu pour<br>protéger les nourrissons et les jeunes enfants le plus tôt possible. Ce sont eux qui sont
+exposés aux risques les plus<br>graves parce que leur système immunitaire n’est pas encore complètement développé et
+leur organisme est moins apte à<br>combattre les infections. Il est donc très important de vacciner les enfants aux
+dates recommandées.<br><br>Je n’ai pas vacciné mon enfant à la date recommandée. Est-il trop tard pour un
+rattrapage?<br><br>Pour la plupart des vaccins, il n’est jamais trop tard pour un rattrapage. Parlez-en à votre agent de
+santé pour faire<br>administrer à vous-même et à votre enfant les doses oubliées.','Les vaccins les plus couramment
+utilisés existent depuis des décennies, et ils sont administrés à des millions de<br>personnes en toute sécurité chaque
+année. Comme tout médicament, chaque vaccin doit faire l’objet d’essais exhaustifs et<br>rigoureux pour s’assurer de son
+innocuité avant son introduction dans un pays.<br><br>Un vaccin expérimental est d’abord testé chez l\'animal afin
+d’évaluer son innocuité et son potentiel de prévention des<br>maladies. Il est ensuite testé dans le cadre d\'essais
+cliniques chez l\'être humain, en trois phases :<br><br>Au cours de la phase I, le vaccin est administré à un petit
+nombre de volontaires pour évaluer son innocuité, pour<br>confirmer qu’il entraîne une réponse immunitaire et pour en
+déterminer la posologie correcte.<br>Au cours de la phase II, le vaccin est habituellement administré à des centaines de
+volontaires chez qui les effets<br>secondaires éventuels sont étroitement surveillés, afin d’évaluer davantage sa
+capacité à entraîner une réponse<br>immunitaire. Des données sont également recueillies autant que possible sur l\'issue
+de la maladie, mais généralement<br>pas<br>en quantité suffisante pour avoir une idée claire de l’effet du vaccin sur la
+maladie. Les participants à cette phase<br>ont les mêmes caractéristiques (âge et sexe, par exemple) que les personnes
+auxquelles le vaccin est destiné. Certains<br>volontaires sont vaccinés et d’autres non, ce qui permet de faire des
+comparaisons et de tirer des conclusions sur le<br>vaccin.<br>Au cours de la phase III, le vaccin est administré à des
+milliers de volontaires – dont certains reçoivent le vaccin<br>expérimental, et d’autres non, tout comme dans les essais
+de phase II. Les données des deux groupes sont soigneusement<br>comparées pour déterminer si le vaccin est sûr et
+efficace contre la maladie visée.<br>Une fois que les résultats des essais cliniques sont disponibles, il faut faire
+d\'autres démarches, dont des examens de<br>l’efficacité, de l’innocuité et de la fabrication pour obtenir les
+autorisations réglementaires et de santé publique<br>nécessaires, avant qu’un vaccin ne puisse être introduit dans un
+programme national de vaccination.<br><br>Après l’introduction d’un vaccin, une surveillance étroite est mise en place
+pour continuer à détecter les effets<br>secondaires indésirables inattendus et pour évaluer encore l’efficacité du
+vaccin dans le cadre de son utilisation<br>systématique chez un nombre encore plus grand de personnes, afin de
+déterminer comment utiliser le vaccin pour qu\'il<br>confère la meilleure protection. Pour plus d’informations (en
+anglais) sur la mise au point et l’innocuité des vaccins,cliquer <a href="oms.fr">ici</a>','Si vous avez des
+questions sur les vaccins, parlez-en avec un agent de santé qui pourra vous donner des conseils<br>scientifiques sur la
+vaccination pour vous et votre famille, notamment sur le calendrier de vaccination recommandé dans<br>votre
+pays.<br><br>En recherchant des informations en ligne sur les vaccins, assurez-vous de ne consulter que des sources
+fiables. Pour<br>vous aider à les trouver, l’OMS a examiné et « certifié » de nombreux sites dans le monde qui ne
+donnent que des<br>informations reposant sur des bases scientifiques solides et des études indépendantes menées par des
+experts techniques<br>de premier plan. Tous ces sites sont membres du Réseau pour la sécurité des vaccins
+(www.vaccinesafetynet.org).','Tous les composants jouent un rôle important pour garantir l’innocuité et l’efficacité
+du vaccin. On y trouve:<br><br>• L’antigène. Il s’agit d’une forme inactivée ou affaiblie d’un germe, virus ou bactérie,
+qui apprend à l’organisme à le<br>reconnaître et à combattre la maladie s’il est en présence de ce germe à un stade
+ultérieur.<br>• Les adjuvants, qui aident à renforcer la réponse immunitaire. En d’autres termes, ils aident les vaccins
+à mieux agir.<br>• Les conservateurs, qui aident à maintenir l’efficacité du vaccin.<br>• Les stabilisateurs, qui
+protègent le vaccin pendant le stockage et le transport.<br><br>Les composants des vaccins peuvent paraître étranges
+lorsqu’on les voit énumérés sur une étiquette. Pourtant, beaucoup<br>d’entre eux sont présents naturellement dans
+l’organisme, dans l’environnement et dans les aliments que nous consommons.<br>Tous, ainsi que les vaccins eux-mêmes,
+sont soigneusement testés et contrôlés pour garantir leur innocuité.','L’OMS veille à ce que chacun, où qu\'il se
+trouve, soit protégé par des vaccins sûrs et efficaces. Pour ce faire, elle<br>aide les pays à mettre en place des
+systèmes rigoureux afin de garantir l\'innocuité vaccins et à appliquer des normes<br>internationales strictes pour leur
+réglementation.<br><br>Avec des scientifiques du monde entier, les experts de l’OMS effectuent une surveillance continue
+pour s’assurer que les<br>vaccins restent sûrs. Elle collabore également avec ses partenaires pour aider les pays à
+enquêter et à communiquer en<br>cas de problèmes potentiels.<br><br>Tous les effets secondaires indésirables inattendus
+qui sont signalés à l’OMS sont évalués par un groupe indépendant<br>d’experts, le Comité consultatif mondial de la
+sécurité vaccinale.','Les vaccins agissent en entraînant et en préparant les défenses naturelles de l’organisme – le
+système immunitaire – à<br>reconnaître et à combattre les virus et les bactéries. Si l’organisme est ensuite exposé à
+ces agents pathogènes, il<br>sera prêt à les détruire rapidement – ce qui évitera qu’une maladie ne se
+déclare.<br><br>Quand quelqu’un se fait vacciner contre une maladie, son risque d’être infecté baisse également et cette
+personne est<br>donc beaucoup moins susceptible de transmettre la maladie à d’autres. À mesure que le nombre de
+personnes vaccinées au<br>sein d’un groupe augmente, moins de personnes restent vulnérables et il est moins probable
+qu’une personne infectée<br>transmette l’agent pathogène à une autre. Réduire la possibilité qu’un agent pathogène
+circule au sein d’un groupe<br>protège de la maladie ciblée par le vaccin les personnes qui ne peuvent pas le recevoir
+(en raison de problèmes de<br>santé, comme les allergies, ou de leur âge).<br><br>On désigne par « immunité collective »
+(ou « immunité de la population ») la protection indirecte contre une maladie<br>infectieuse qui s’obtient lorsque
+l’immunité gagne du terrain au sein d’une population, que ce soit par la vaccination<br>ou par une infection antérieure.
+L’immunité collective ne signifie pas que les personnes non vaccinées ou celles qui<br>n’ont pas été infectées
+auparavant soient elles-mêmes immunisées. En fait, il y a immunité collective lorsque les<br>personnes qui ne sont pas
+immunisées, mais qui vivent au sein d’un groupe où l’immunité est élevée, risquent moins de<br>contracter une maladie
+que les personnes non immunisées dans un groupe où l’immunité est faible.<br><br>Dans les groupes où l’immunité est
+élevée, les personnes non immunisées ont moins de risque de contracter la maladie que<br>si ce n’était pas le cas, mais
+ce moindre risque résulte de l’immunité des personnes du groupe dans lequel elles vivent<br>(c.-à-d. l’immunité
+collective) et non d’une immunité qui leur serait propre. Même après que l’immunité collective a été<br>atteinte et que
+l’on observe un risque réduit pour les personnes non vaccinées de contracter la maladie, ce risque<br>continuera de
+diminuer si la couverture vaccinale ne cesse d’augmenter. Lorsque la couverture vaccinale est très élevée,le risque
+pour les personnes non immunisées de contracter la maladie peut s’apparenter à celui des personnes qui
+ont<br>véritablement développé une immunité.<br><br>L’OMS prône la recherche d’une « immunité collective » par la
+vaccination et non en permettant à une maladie de se<br>propager au sein d’une population, car cela entraînerait des cas
+et des décès inutiles.<br><br>Dans le cas de la COVID-19, une nouvelle maladie qui provoque une pandémie mondiale, de
+nombreux vaccins sont en<br>développement et certains sont dans la phase initiale de déploiement, après avoir démontré
+leur innocuité et leur<br>efficacité contre la maladie. On ne sait pas quelle est la proportion de la population qui
+doit être vaccinée contre la<br>COVID-19 pour commencer à induire une immunité collective. Il s’agit d’un domaine de
+recherche important qui aboutira<br>probablement à des conclusions différentes en fonctions des groupes, du vaccin, des
+populations prioritaires pour la<br>vaccination ainsi que d’autres facteurs.<br><br>L’immunité collective est un aspect
+important des vaccins contre la poliomyélite, les rotavirus, le pneumocoque,Haemophilus influenzae de type b, la
+fièvre jaune, le méningocoque et de nombreuses autres maladies à prévention<br>vaccinale. Pourtant, cette approche ne
+fonctionne que pour les maladies à prévention vaccinale qui présentent un élément<br>de transmission interhumaine. Le
+tétanos, par exemple, s’attrape par des bactéries présentes dans l’environnement, et<br>non par un contact avec d’autres
+personnes, de sorte que l’on n’est pas protégé contre la maladie si l’on n’est pas<br>vacciné, même si la majeure partie
+de la population l’est.','Les vaccins nous protègent tout au long de la vie, à partir de la naissance, dans
+l’enfance, l’adolescence et jusqu’à<br>la<br>vieillesse. Dans la plupart des pays, nous recevons une fiche ou un carnet
+de vaccination nous disant les vaccins que<br>nous ou nos enfants avons eus et les dates des prochains vaccins ou
+rappels. Il est important de rester à jour de toutes<br>les vaccinations.<br><br>En retardant les vaccinations, on
+risque de tomber gravement malade. Si on attend le moment où nous pensons que nous<br>risquons d’être exposés à une
+maladie, comme lors d’une épidémie, il ne restera peut-être pas suffisamment de temps pour<br>que le vaccin puisse agir
+ou pour administrer toutes les doses recommandées.'
+] %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <div class="card">
+
+                <div class="card-header text-center">
+                    Cliquez sur un des mots
+                </div>
+                <div class="card-body">
+                    <div class="card-text row">
+                        {% for sujet in sujets %}
+                        <div class="col text-center">
+                            <a class="word" question="{{questions[loop.index0]}}"
+                                texte="{{textes[loop.index0]}}">{{CloudWord(sujet)}}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="card-footer text-muted" id="mots_texte">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
