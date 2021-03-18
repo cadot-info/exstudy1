@@ -43,7 +43,7 @@ fa-facebook','url':'facebook/1234'},'C.G.U.':{'link':'fas fa-ruler','url':'/cgu'
                     <nav class="nav navbar w-100 navbar-light bg-light">
                         <li class="nav-item">
                             <a class="nav-link {% if page=='index' %}selected {% endif %} "
-                                href="{{path('home')}}">Accueil</a>
+                                href="{{path('home')}}">accueil</a>
                         </li>
                         {% for titre,icone in bouton %}
                         <li class="nav-item">
@@ -67,7 +67,7 @@ fa-facebook','url':'facebook/1234'},'C.G.U.':{'link':'fas fa-ruler','url':'/cgu'
 
                     {% for titre,icone in bouton %}
                     <div class="bouton">
-                        <a class="btn btn-primary bouton-fond active" href="/{{titre}}" role="button">
+                        <a class="btn btn-primary bouton-fond active shadowroot" href="/{{titre}}" role="button">
                             <i class="fas {{icone}} fa-3x"></i>
                             <h2 class="bouton-fond-titre {% if page==titre %}selected {% endif %}"
                                 alt="menu vers {{icone|split('-')[2]}}">{{titre}} </h2>
