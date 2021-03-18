@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Solidaire{% endblock %}
+
+{% block body %}
+    <h1>Create new Solidaire</h1>
+
+    {{ include('solidaire/_form.html.twig') }}
+
+    <a href="{{ path('solidaire_index') }}">back to list</a>
+{% endblock %}

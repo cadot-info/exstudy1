@@ -2,20 +2,38 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Solidaire;
+use App\Form\SolidaireType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class HomeController extends AbstractController
 {
+
+
     /**
      * @Route("/{page}", name="home")
      */
-    public function index($page = 'index'): Response
+    public function index($page = 'index', Request $request): Response
     {
+        $solidaire = new Solidaire();
+        $form = $this->createForm(SolidaireType::class, $solidaire);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($solidaire);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('home');
+        }
+
         return $this->render('home/' . seo($page) . '.html.twig', [
             'page' => $page,
+            'form' => $form->createView()
         ]);
     }
 }

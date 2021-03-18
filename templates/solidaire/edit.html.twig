@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Solidaire{% endblock %}
+
+{% block body %}
+    <h1>Edit Solidaire</h1>
+
+    {{ include('solidaire/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('solidaire_index') }}">back to list</a>
+
+    {{ include('solidaire/_delete_form.html.twig') }}
+{% endblock %}

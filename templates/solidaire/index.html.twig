@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Solidaire index{% endblock %}
+
+{% block body %}
+    <h1>Solidaire index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Codepostal</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for solidaire in solidaires %}
+            <tr>
+                <td>{{ solidaire.id }}</td>
+                <td>{{ solidaire.nom }}</td>
+                <td>{{ solidaire.prenom }}</td>
+                <td>{{ solidaire.email }}</td>
+                <td>{{ solidaire.codepostal }}</td>
+                <td>
+                    <a href="{{ path('solidaire_show', {'id': solidaire.id}) }}">show</a>
+                    <a href="{{ path('solidaire_edit', {'id': solidaire.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('solidaire_new') }}">Create new</a>
+{% endblock %}

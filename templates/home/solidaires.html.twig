@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page tous solidaires!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row justify-content-around">
+        <div class="col-12">
+            <h1 class="text-center">Formulaire </h1>
+        </div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn btn-warning">{{ button_label|default('Participer') }}</button>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}
