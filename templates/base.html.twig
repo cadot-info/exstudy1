@@ -24,6 +24,11 @@
 </head>
 {% set
 bouton={'actualités':'fa-hand-paper','avancées':'fa-spray-can','solidaires':'fa-street-view'} %}
+{% set
+apropos=['Directeur général','Secrétariat','Compatbilité'] %}
+{% set
+liens={'twitter':{'link':'fab fa-twitter','url':'twitter/12343'},'Facebook':{'link':'fab
+fa-facebook','url':'facebook/1234'},'C.G.U.':{'link':'fas fa-ruler','url':'/cgu'}} %}
 
 <body>
     <div class="container">
@@ -57,6 +62,7 @@ bouton={'actualités':'fa-hand-paper','avancées':'fa-spray-can','solidaires':'f
                         </li>
                     </nav>
                 </div>
+
                 <div class="row d-flex d-lg-none justify-content-around mt-3 mb-2" id="accessRapide">
 
                     {% for titre,icone in bouton %}
@@ -69,11 +75,42 @@ bouton={'actualités':'fa-hand-paper','avancées':'fa-spray-can','solidaires':'f
                     </div>
                     {% endfor %}
                 </div>
-                {% endblock %}
-                {% block body %}{% endblock %}
-                {% block footer %}
-                {% endblock %}
             </div>
+            {% endblock %}
+            {% block body %}{% endblock %}
+            {% block footer %}
+            <div class="col-12 mx-0">
+                <div class="row footer">
+                    <div class="d-none d-lg-block col-lg-4">
+                        <img src="{{asset('build/logo_mobile.png')}}" alt="logo mobile"
+                            class="img-fluid mx-auto d-block" alt="">
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <h1 class="footer-titre">A propos</h1>
+                        <dh>
+                            {% for row in apropos %}
+                            <dt><a href="mailto:{{row}}@tousanticovid.fr"><span class="footer-lien">{{row}}</span>
+                            </dt>
+                            {% endfor %}
+
+                        </dh>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <h1 class="footer-titre">Liens</h1>
+                        <dh>
+                            {% for titre,row in liens %}
+                            <dt><i class="{{row.link}}"></i> <a href="{{row.url}}"><span
+                                        class="footer-lien">{{titre}}</span>
+                            </dt>
+                            {% endfor %}
+
+                        </dh>
+
+                    </div>
+
+                </div>
+            </div>
+            {% endblock %}
         </div>
 </body>
 

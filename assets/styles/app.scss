@@ -23,6 +23,22 @@ nav {
     }
 }
 
+.footer {
+    background-color: $color_gris;
+
+    &-titre {
+        font-size: 1rem;
+        color: $color_bleue;
+        font-weight: 900;
+        font-variant: all-petite-caps;
+    }
+
+    &-lien {
+        font-size: .7rem;
+        color: $color_creme;
+    }
+}
+
 .bouton {
     :active {
         color: $color_orange;
