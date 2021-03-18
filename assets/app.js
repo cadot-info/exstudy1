@@ -6,6 +6,7 @@ import "bootstrap";
 
 import './styles/app.scss';
 $('[data-toggle="popover"]').popover();
+import "bootstrap/dist/css/bootstrap.css";
 require('@fortawesome/fontawesome-free/css/all.min.css');
 require('@fortawesome/fontawesome-free/js/all.js');
 
