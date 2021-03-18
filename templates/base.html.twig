@@ -51,7 +51,18 @@
                                 Déconnexion</a>
                         </li>
                     </nav>
-
+                </div>
+                <div class="row d-flex justify-content-around mt-3 mb-2" id="accessRapide">
+                    {% set
+                    bouton={'Actualités':'fa-hand-paper','Avancées':'fa-spray-can','Solidaires':'fa-street-view'} %}
+                    {% for titre,icone in bouton %}
+                    <div class="bouton">
+                        <a class="btn btn-primary bouton-fond" href="#" role="button">
+                            <i class="fas {{icone}} fa-3x"></i>
+                            <h2 class="bouton-fond-titre" alt="icône {{icone|split('-')[2]}}">{{titre}} </h2>
+                        </a>
+                    </div>
+                    {% endfor %}
                 </div>
                 {% endblock %}
                 {% block body %}{% endblock %}

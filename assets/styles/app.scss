@@ -1,0 +1,10 @@
+:root {
+    font-size: 16pt;
+}
+
+.bouton {
+    &-titre {
+        font-size: .9rem;
+        color: red;
+    }
+}
