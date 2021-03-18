@@ -1,10 +1,26 @@
+$color_blanc:#fbfbfd;
+$color_bleue:#496d8f;
+$color_orange:#e6684c;
+$color_creme:#d5b3af;
+$color_gris:#d8d5df;
+
 :root {
     font-size: 16pt;
 }
 
+.selected {
+    color: $color_orange !important;
+}
+
 .bouton {
-    &-titre {
-        font-size: .9rem;
-        color: red;
+    :active {
+        color: $color_orange;
+    }
+
+    &-fond {
+        &-titre {
+            font-size: .9rem;
+            color: $color_gris;
+        }
     }
 }

@@ -28,7 +28,8 @@
         <div class="row">
             {% block header %}
             <div class="col-12 col-lg-3">
-                <img src="{{asset('build/logo_mobile.png')}}" class="img-fluid mx-auto d-block" alt="">
+                <img src="{{asset('build/logo_mobile.png')}}" alt="logo mobile" class="img-fluid mx-auto d-block"
+                    alt="">
             </div>
             <div class="col-12 col-lg-9">
                 <div class="row d-none  d-lg-block ">
@@ -54,12 +55,13 @@
                 </div>
                 <div class="row d-flex justify-content-around mt-3 mb-2" id="accessRapide">
                     {% set
-                    bouton={'Actualités':'fa-hand-paper','Avancées':'fa-spray-can','Solidaires':'fa-street-view'} %}
+                    bouton={'actualités':'fa-hand-paper','avancées':'fa-spray-can','solidaires':'fa-street-view'} %}
                     {% for titre,icone in bouton %}
                     <div class="bouton">
-                        <a class="btn btn-primary bouton-fond" href="#" role="button">
+                        <a class="btn btn-primary bouton-fond active" href="/{{titre}}" role="button">
                             <i class="fas {{icone}} fa-3x"></i>
-                            <h2 class="bouton-fond-titre" alt="icône {{icone|split('-')[2]}}">{{titre}} </h2>
+                            <h2 class="bouton-fond-titre {% if page==titre %}selected {% endif %}"
+                                alt="menu vers {{icone|split('-')[2]}}">{{titre}} </h2>
                         </a>
                     </div>
                     {% endfor %}
